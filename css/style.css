@@ -1,0 +1,217 @@
+:root{
+  --bg:#f7f9fc; 
+  --card:#fff; 
+  --text:#0f1724; 
+  --muted:#6b7280;
+  --accent:#06b6d4; 
+  --green-dot:#10b981; 
+  --glass:rgba(255,255,255,0.6);
+  --shadow:0 6px 18px rgba(15,23,36,0.08);
+}
+
+html.dark{
+  --bg:#061018; 
+  --card:#071025; 
+  --text:#e6eef6; 
+  --muted:#9aa8b6;
+  --accent:#22d3ee; 
+  --green-dot:#34d399; 
+  --glass:rgba(10,18,25,0.55);
+  --shadow:0 8px 28px rgba(2,6,23,0.7);
+}
+
+body{ 
+  font-family: "Inter", sans-serif; 
+  background:var(--bg); 
+  color:var(--text); 
+  margin:0; 
+  padding:0; 
+  line-height:1.6;
+}
+
+.container{ 
+  max-width:1100px; 
+  margin:0 auto; 
+  padding:28px;
+}
+
+/* NAV */
+.nav-inner{ 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  background:var(--glass); 
+  padding:10px 16px; 
+  border-radius:12px; 
+  backdrop-filter:blur(6px); 
+  box-shadow:var(--shadow);
+  position:relative;
+}
+
+.nav-links a{ 
+  text-decoration:none; 
+  color:var(--muted); 
+  padding:8px 10px; 
+  border-radius:8px;
+}
+
+.nav-links a.active, .nav-links a:hover{ 
+  color:var(--text);
+}
+
+#menu-toggle{
+  display:none; 
+  background:none;
+  border:none;
+  font-size:20px;
+  color:var(--text);
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{ 
+  display:grid; 
+  grid-template-columns:1fr 320px; 
+  gap:24px; 
+  align-items:center; 
+  padding:90px 0;
+}
+
+.profile{ 
+  width:220px; 
+  height:220px; 
+  border-radius:50%; 
+  overflow:hidden; 
+  border:5px solid rgba(255,255,255,0.1); 
+  box-shadow:var(--shadow);
+}
+
+.profile img{ 
+  width:100%; 
+  height:100%; 
+  object-fit:cover;
+}
+
+/* CARD */
+.card{ 
+  background:var(--card); 
+  padding:18px; 
+  border-radius:12px; 
+  box-shadow:var(--shadow); 
+  margin-top:40px;
+}
+
+/* SKILLS */
+.skills-grid{ 
+  display:grid; 
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); 
+  gap:12px; 
+  margin-top:12px;
+}
+
+.skill-item{ 
+  display:flex; 
+  align-items:center; 
+  gap:10px; 
+  padding:10px; 
+  border-radius:8px;
+}
+
+.dot{ 
+  width:10px; 
+  height:10px; 
+  border-radius:50%; 
+  background:var(--green-dot);
+}
+
+/* CERTIFICATES & RESUME */
+.credentials-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+  margin-top:12px;
+}
+
+.credential-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px;
+  border-radius:12px;
+  border:2px solid #06b6d4;
+  background:var(--card);
+}
+
+.credential-item i{
+  font-size:22px;
+  color:#FF9933; /* Drive icon color */
+  transition:color .3s;
+}
+
+.credential-item i:hover{
+  color:#06b6d4;
+}
+
+/* PROJECTS */
+.projects-grid{ 
+  display:grid; 
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); 
+  gap:14px; 
+  margin-top:12px;
+}
+
+/* === Project Card with Blue Border + Tech + GitHub === */
+.project-card {
+  padding:14px;
+  border-radius:12px;
+  background:var(--card);
+  border: 2px solid #06b6d4; 
+  transition:all .2s;
+  position: relative;
+}
+
+.project-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(2,6,23,0.12);
+}
+
+/* Project technology text */
+.project-tech {
+  font-size:13px;
+  color:var(--accent);
+  margin-bottom:6px;
+}
+
+/* GitHub icon on top-right of project card */
+.github-link {
+  position:absolute;
+  top:10px;
+  right:10px;
+  font-size:18px;
+  color:var(--text);
+  transition: color .3s;
+}
+
+.github-link:hover {
+  color:var(--accent);
+}
+
+/* FOOTER */
+footer{
+  text-align:center; 
+  color:var(--muted); 
+  font-size:13px; 
+  margin-top:40px;
+}
+
+/* Responsive */
+@media(max-width:900px){ 
+  .hero{ grid-template-columns:1fr; text-align:center; } 
+  .nav-links{ display:none; flex-direction:column; gap:10px; background:var(--card); position:absolute; top:60px; right:16px; padding:12px; border-radius:12px; box-shadow:var(--shadow);}
+  #menu-toggle{ display:inline-block; }
+  .nav-links.show{ display:flex; }
+}
+
+@media(max-width:600px){ 
+  .skills-grid, .projects-grid, .credentials-grid{ grid-template-columns:1fr; } 
+}
