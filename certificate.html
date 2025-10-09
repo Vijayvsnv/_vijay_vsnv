@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates — Vijay Bairagi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Internal CSS for individual credential boxes */
+    .credential-item {
+      border: 2px solid #06b6d4; /* blue border */
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 16px;
+      background: var(--card);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(6,182,212,0.15);
+      transition: box-shadow 0.3s ease;
+    }
+    .credential-item:hover {
+      box-shadow: 0 8px 28px rgba(6,182,212,0.3);
+    }
+    .credential-item span {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .credential-item a i {
+      font-size: 28px;
+      color: #FF9933;
+      transition: color 0.3s;
+    }
+    .credential-item a:hover i {
+      color: #06b6d4; /* blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner container">
+      <div class="brand"><h3>Vijay Bairagi</h3></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="skill.html">Skills</a>
+        <a href="certificate.html" class="active">Certificates</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="controls">
+        <button class="btn" id="theme-toggle" title="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+        <button class="btn" id="menu-toggle" title="Menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="certificates" class="card">
+      <h2>Certificates & Resume</h2>
+
+      <div class="credential-item">
+        <span>Resume</span>
+        <a href="https://drive.google.com/file/d/1LSvBA_m_tdXoqgPWjFIxySRA1CpEMZtC/view?usp=sharing" target="_blank" aria-label="Resume Link">
+          <i class="fa-brands fa-google-drive"></i>
+        </a>
+      </div>
+
+      <div class="credential-item">
+        <span>Data Analytics Certificate (PW Skills)</span>
+        <a href="https://drive.google.com/file/d/1WF479dZzZLme9PlGaOEGL7-iDuI0TR3s/view?usp=sharing" target="_blank" aria-label="Certificate Link">
+          <i class="fa-brands fa-google-drive"></i>
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

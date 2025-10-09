@@ -1,167 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vijay Bairagi — AI/ML · GenAI · Data Analytics</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Internal CSS for bordered boxes on Hero and About */
+    #home.hero, #about.card {
+      border: 2px solid #06b6d4; /* blue border */
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 32px;
+      background: var(--card);
+      box-shadow: 0 4px 14px rgba(6,182,212,0.15);
+      transition: box-shadow 0.3s ease;
+    }
+    #home.hero:hover, #about.card:hover {
+      box-shadow: 0 8px 28px rgba(6,182,212,0.36);
+    }
+    /* Social icons bigger and spaced nicely */
+    .socials {
+      margin-top: 12px;
+      display: flex;
+      gap: 20px;
+      font-size: 28px;
+    }
+    .socials a {
+      text-decoration: none;
+    }
+    .social-linkedin {
+      color: #0a66c2; /* LinkedIn blue */
+    }
+    .social-github {
+      color: #000; /* GitHub black */
+    }
+  </style>
 </head>
 <body>
-  <!-- NAV -->
   <nav>
     <div class="nav-inner container">
-      <div class="brand">
-        <h3>Vijay Bairagi</h3>
-      </div>
+      <div class="brand"><h3>Vijay Bairagi</h3></div>
       <div class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="skill.html">Skills</a>
+        <a href="certificate.html">Certificates</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="controls">
-        <button class="btn" id="theme-toggle" title="Toggle dark mode">
-          <i class="fa-regular fa-moon"></i>
-        </button>
-        <button class="btn" id="menu-toggle" title="Menu">
-          <i class="fa-solid fa-ellipsis-vertical"></i>
-        </button>
+        <button class="btn" id="theme-toggle" title="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+        <button class="btn" id="menu-toggle" title="Menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
       </div>
     </div>
   </nav>
 
   <main class="container">
     <!-- HERO -->
-    <section id="home" class="hero">
-      <div>
-        <h1 class="name">Vijay Bairagi</h1>
-        <div class="subtitle">AI/ML · GenAI · Data Analytics Professional</div>
-        <div class="position">AI & Data Analytics Enthusiast | MCA (AI/ML)</div>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/vijay-bairagi-82240a160/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://github.com/Vijayvsnv" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="profile"><img src="images/profile.jpg" alt="Vijay Bairagi"></div>
-      </div>
-    </section>
+     <!-- HERO -->
+<section id="home" class="hero">
+  <div>
+    <h1 class="name">Vijay Bairagi</h1>
+    <div class="subtitle">AI/ML · Generative AI · Data Science Professional</div>
+    <div class="position">Junior Data Scientist at Arcap REIT AI Solutions | MCA (AI/ML)</div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/vijay-bairagi-82240a160/" target="_blank" class="social-linkedin" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/Vijayvsnv" target="_blank" class="social-github" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="profile"><img src="images/profile.jpg" alt="Vijay Bairagi" /></div>
+  </div>
+</section>
+
 
     <!-- ABOUT -->
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I'm an MCA student specializing in AI & ML. Passionate about Data Analytics, ML Engineer and Generative AI</p>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="card">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item"><span class="dot"></span>Python</div>
-        <div class="skill-item"><span class="dot"></span>My SQL</div>
-        <div class="skill-item"><span class="dot"></span>Power BI</div>
-        <div class="skill-item"><span class="dot"></span>Machine Learning & Sklearn</div>
-        <div class="skill-item"><span class="dot"></span>Familiar with Generative AI(LangChain)</div>
-        <div class="skill-item"><span class="dot"></span>Flask APIs</div>
-        <div class="skill-item"><span class="dot"></span>Familiar with Deep Learning</div>
-        <div class="skill-item"><span class="dot"></span>Docker</div>
-        <div class="skill-item"><span class="dot"></span>Pandas, Numpy, Matplotlib, Seaborn</div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATES & RESUME -->
-    <section id="certificates" class="card">
-      <h2>Certificates & Resume</h2>
-      <div class="credentials-grid">
-        <div class="credential-item">
-          <span>Data Analytics Certificate (PW Skills)</span>
-          <a href="https://drive.google.com/file/d/1WF479dZzZLme9PlGaOEGL7-iDuI0TR3s/view?usp=sharing" target="_blank">
-            <i class="fa-brands fa-google-drive"></i>
-          </a>
-        </div>
-        <div class="credential-item">
-          <span>Resume</span>
-          <a href="https://drive.google.com/file/d/1LSvBA_m_tdXoqgPWjFIxySRA1CpEMZtC/view?usp=sharing" target="_blank">
-            <i class="fa-brands fa-google-drive"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="card">
-      <h2>Projects</h2>
-      <!-- Data Analytics Projects -->
-      <h3>Data Analytics Projects</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">Netflix Data Analytics</div>
-          <div class="project-tech">Technologies: Python, Pandas, Matplotlib</div>
-          <a href="https://github.com/Vijayvsnv" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
-          <div>Performed EDA on Netflix dataset using Pandas & Matplotlib.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Bitcoin Trend Analysis</div>
-          <div class="project-tech">Technologies: Python, SQL, Power BI</div>
-          <a href="https://github.com/Vijayvsnv" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
-          <div>Python + SQL + Power BI dashboard analyzing Bitcoin trends.</div>
-        </div>
-      </div>
-
-      <!-- AI & ML Projects -->
-      <h3>AI & ML Projects</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">AI InsiderShield</div>
-          <div class="project-tech">Technologies: Python, ML, Anomaly Detection</div>
-          <a href="https://github.com/Vijayvsnv" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
-          <div>Detects insider trading patterns using ML models.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">SIP Investment Calculator</div>
-          <div class="project-tech">Technologies: Flask, Python</div>
-          <a href="https://github.com/Vijayvsnv" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
-          <div>Flask app predicting SIP fund growth monthly & yearly.</div>
-        </div>
-      </div>
-
-      <!-- Generative AI Projects -->
-      <h3>Generative AI Projects</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">Gen AI Text Summarizer</div>
-          <div class="project-tech">Technologies: Python, OpenAI GPT</div>
-          <a href="https://github.com/Vijayvsnv" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
-          <div>Web app that summarizes articles using Generative AI models.</div>
-        </div>
-        <div class="project-card">
-          <div class="project-title">AI Image Generator</div>
-          <div class="project-tech">Technologies: Python, OpenAI DALL·E</div>
-          <a href="https://github.com/Vijayvsnv" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
-          <div>Generates images from text prompts using Gen AI models.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="card">
-      <h2>Education</h2>
-      <p><strong>MCA (AI/ML) — Oriental University, Indore</strong> (2025)</p>
-      <p>12th (PCM) — 66.6% RBSE</p>
-      <p>10th — 74% RBSE</p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p><i class="fa-solid fa-envelope"></i> vijayvaishnav906@gmail.com</p>
-      <p><i class="fa-solid fa-phone"></i> +919680873141</p>
+      <p>I’m Vijay Bairagi, a passionate AI & Data Science professional with a strong focus on Machine Learning and Artificial Intelligence. I completed my Master of Computer Applications (AI/ML) in May 2025, and in August 2025, I joined Arcap REIT AI Solutions as a Junior Data Scientist</p>
     </section>
   </main>
+
+ 
 
   <script src="js/script.js"></script>
 </body>
